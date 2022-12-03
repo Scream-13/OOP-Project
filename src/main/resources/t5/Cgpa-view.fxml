@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="scenepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="t5.CgpaController">
+    <children>
+        <Label fx:id="nameLabel1" layoutX="292.0" layoutY="24.0" prefHeight="40.0" prefWidth="174.0" text="CGPA calculator" />
+        <TextField fx:id="c1" layoutX="32.0" layoutY="115.0" />
+        <Label layoutX="73.0" layoutY="86.0" prefHeight="17.0" prefWidth="82.0" text="courses" />
+        <Label layoutX="208.0" layoutY="86.0" prefHeight="17.0" prefWidth="47.0" text="credits" />
+        <Label layoutX="268.0" layoutY="86.0" text="max" />
+        <Label layoutX="310.0" layoutY="86.0" text="min" />
+        <Label layoutX="359.0" layoutY="86.0" text="median" />
+        <Label layoutX="428.0" layoutY="86.0" prefHeight="17.0" prefWidth="61.0" text="quiz 1" />
+        <Label layoutX="481.0" layoutY="86.0" prefHeight="17.0" prefWidth="53.0" text="quiz 2" />
+        <Label layoutX="527.0" layoutY="86.0" prefHeight="17.0" prefWidth="68.0" text="assign." />
+        <Label layoutX="595.0" layoutY="86.0" prefHeight="17.0" prefWidth="53.0" text="midsem" />
+        <Label layoutX="662.0" layoutY="86.0" prefHeight="17.0" prefWidth="61.0" text="compre" />
+        <TextField fx:id="cr1" layoutX="211.0" layoutY="116.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="max1" layoutX="258.0" layoutY="117.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="min1" layoutX="310.0" layoutY="117.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="med1" layoutX="362.0" layoutY="116.0" prefHeight="26.0" prefWidth="47.0" />
+        <TextField fx:id="q11" layoutX="428.0" layoutY="118.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="q21" layoutX="481.0" layoutY="118.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="ass1" layoutX="527.0" layoutY="119.0" prefHeight="26.0" prefWidth="41.0" />
+        <TextField fx:id="mids1" layoutX="595.0" layoutY="118.0" prefHeight="26.0" prefWidth="47.0" />
+        <TextField fx:id="comp1" layoutX="662.0" layoutY="117.0" prefHeight="26.0" prefWidth="61.0" />
+        <TextField fx:id="c2" layoutX="33.0" layoutY="157.0" />
+        <TextField fx:id="cr2" layoutX="212.0" layoutY="158.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="max2" layoutX="259.0" layoutY="159.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="min2" layoutX="311.0" layoutY="159.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="med2" layoutX="363.0" layoutY="158.0" prefHeight="26.0" prefWidth="47.0" />
+        <TextField fx:id="q12" layoutX="429.0" layoutY="160.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="q22" layoutX="482.0" layoutY="160.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="ass2" layoutX="528.0" layoutY="161.0" prefHeight="26.0" prefWidth="41.0" />
+        <TextField fx:id="mids2" layoutX="596.0" layoutY="160.0" prefHeight="26.0" prefWidth="47.0" />
+        <TextField fx:id="comp2" layoutX="663.0" layoutY="159.0" prefHeight="26.0" prefWidth="61.0" />
+        <TextField fx:id="c3" layoutX="34.0" layoutY="199.0" />
+        <TextField fx:id="cr3" layoutX="213.0" layoutY="200.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="max3" layoutX="260.0" layoutY="201.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="min3" layoutX="312.0" layoutY="201.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="med3" layoutX="364.0" layoutY="200.0" prefHeight="26.0" prefWidth="47.0" />
+        <TextField fx:id="q13" layoutX="430.0" layoutY="202.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="q23" layoutX="483.0" layoutY="202.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="ass3" layoutX="529.0" layoutY="203.0" prefHeight="26.0" prefWidth="41.0" />
+        <TextField fx:id="mids3" layoutX="597.0" layoutY="202.0" prefHeight="26.0" prefWidth="47.0" />
+        <TextField fx:id="comp3" layoutX="664.0" layoutY="201.0" prefHeight="26.0" prefWidth="61.0" />
+        <TextField fx:id="c4" layoutX="34.0" layoutY="243.0" />
+        <TextField fx:id="cr4" layoutX="213.0" layoutY="244.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="max4" layoutX="260.0" layoutY="245.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="min4" layoutX="312.0" layoutY="245.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="med4" layoutX="364.0" layoutY="244.0" prefHeight="26.0" prefWidth="47.0" />
+        <TextField fx:id="q14" layoutX="430.0" layoutY="246.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="q24" layoutX="483.0" layoutY="246.0" prefHeight="26.0" prefWidth="34.0" />
+        <TextField fx:id="ass4" layoutX="529.0" layoutY="247.0" prefHeight="26.0" prefWidth="41.0" />
+        <TextField fx:id="mids4" layoutX="597.0" layoutY="246.0" prefHeight="26.0" prefWidth="47.0" />
+        <TextField fx:id="comp4" layoutX="664.0" layoutY="245.0" prefHeight="26.0" prefWidth="61.0" />
+      <Label fx:id="nameLabel2" layoutX="58.0" layoutY="331.0" text="Current Cgpa:" />
+      <TextField fx:id="curCg" layoutX="155.0" layoutY="327.0" prefHeight="26.0" prefWidth="34.0" />
+      <Label fx:id="nameLabel3" layoutX="58.0" layoutY="367.0" text="Credits done:" />
+      <TextField fx:id="credDone" layoutX="155.0" layoutY="363.0" prefHeight="26.0" prefWidth="34.0" />
+      <Button fx:id="calcButton" layoutX="323.0" layoutY="341.0" mnemonicParsing="false" onAction="#processData" text="calc" />
+      <Label fx:id="nameLabel4" layoutX="414.0" layoutY="311.0" prefHeight="40.0" prefWidth="174.0" />
+      <Label fx:id="nameLabel5" layoutX="418.0" layoutY="376.0" prefHeight="40.0" prefWidth="174.0" />
+      <Button layoutX="21.0" layoutY="24.0" mnemonicParsing="false" onAction="#goHome" text="Home" />
+    </children>
+</AnchorPane>

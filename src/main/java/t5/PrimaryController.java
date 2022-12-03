@@ -22,7 +22,7 @@ import javafx.stage.Stage;
 
 public class PrimaryController {
 
-    final SortedMap<LocalDate, Integer> PList = new TreeMap<LocalDate, Integer>();
+    final static SortedMap<LocalDate, Integer> PList = new TreeMap<LocalDate, Integer>();
 
     private Stage stage;
     private Scene scene;

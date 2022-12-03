@@ -47,4 +47,14 @@ public class MainController {
 		stage.setScene(scene);
 		stage.show();
 	}
+
+	public void cgpa(ActionEvent event) throws IOException {
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("Cgpa-view.fxml"));
+		root = loader.load();
+		Node node = (Node) event.getSource();
+		stage = (Stage) node.getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+	}	
 }
