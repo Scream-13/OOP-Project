@@ -1,5 +1,4 @@
-package application;
-
+package t5;
 
 import java.io.IOException;
 
@@ -15,27 +14,37 @@ public class MainController {
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
-	
-     public void openNotes(ActionEvent event) throws IOException {
-    	 
-    	 FXMLLoader loader = new FXMLLoader(getClass().getResource("NotesList.fxml"));
-    	 root = loader.load();
-    	 Node node = (Node) event.getSource();
-    	 stage= (Stage) node.getScene().getWindow();
-    	 scene = new Scene(root);
-    	 stage.setScene(scene);
-    	 stage.show();
-     }
-     
-     public void openProjects(ActionEvent event) throws IOException{
-    	 
-    	 FXMLLoader loader = new FXMLLoader(getClass().getResource("ProjectList.fxml"));
-    	 root = loader.load();
-    	 Node node = (Node) event.getSource();
-    	 stage= (Stage) node.getScene().getWindow();
-    	 scene = new Scene(root);
-    	 stage.setScene(scene);
-    	 stage.show();
-    	 
-     }
+
+	public void openNotes(ActionEvent event) throws IOException {
+
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("NotesList.fxml"));
+		root = loader.load();
+		Node node = (Node) event.getSource();
+		stage = (Stage) node.getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+	}
+
+	public void openProjects(ActionEvent event) throws IOException {
+
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("ProjectList.fxml"));
+		root = loader.load();
+		Node node = (Node) event.getSource();
+		stage = (Stage) node.getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+
+	}
+
+	public void openProductivity(ActionEvent event) throws IOException {
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("primary.fxml"));
+		root = loader.load();
+		Node node = (Node) event.getSource();
+		stage = (Stage) node.getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+	}
 }

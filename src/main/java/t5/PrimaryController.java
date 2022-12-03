@@ -7,6 +7,9 @@ import java.util.TreeMap;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
@@ -20,6 +23,10 @@ import javafx.stage.Stage;
 public class PrimaryController {
 
     final SortedMap<LocalDate, Integer> PList = new TreeMap<LocalDate, Integer>();
+
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
     @FXML
     DatePicker pickDate;
@@ -57,6 +64,17 @@ public class PrimaryController {
         Scene scene = new Scene(lineChart, 800, 600);
         lineChart.getData().add(series);
         Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    public void goHome(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Main.fxml"));
+        root = loader.load();
+        Node node = (Node) event.getSource();
+        stage = (Stage) node.getScene().getWindow();
+        scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
