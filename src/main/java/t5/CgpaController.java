@@ -25,7 +25,7 @@ import java.util.LinkedHashMap;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
-public class CgpaController implements Initializable {
+public class CgpaController extends home implements Initializable, Processor {
     public static Student s1 = new Student();
 
     private static final DecimalFormat decfor = new DecimalFormat("0.000");
@@ -90,16 +90,6 @@ public class CgpaController implements Initializable {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-    }
-
-    public void goHome(ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Main.fxml"));
-		root = loader.load();
-		Node node = (Node) event.getSource();
-		stage = (Stage) node.getScene().getWindow();
-		scene = new Scene(root);
-		stage.setScene(scene);
-		stage.show();
     }
 
     public void processData(ActionEvent event) throws IOException {

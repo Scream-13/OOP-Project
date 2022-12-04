@@ -20,7 +20,7 @@
             <TreeView fx:id="treeview" prefHeight="295.0" prefWidth="598.0" />
          </content>
       </ScrollPane>
-      <Button fx:id="home" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#home" prefHeight="26.0" prefWidth="82.0" text="Home">
+      <Button fx:id="home" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#goHome" prefHeight="26.0" prefWidth="82.0" text="Home">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

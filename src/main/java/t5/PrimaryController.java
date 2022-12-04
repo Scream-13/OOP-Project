@@ -20,13 +20,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class PrimaryController {
+public class PrimaryController extends home {
 
     final static SortedMap<LocalDate, Integer> PList = new TreeMap<LocalDate, Integer>();
-
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
 
     @FXML
     DatePicker pickDate;
@@ -68,14 +64,4 @@ public class PrimaryController {
         stage.show();
     }
 
-    @FXML
-    public void goHome(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Main.fxml"));
-        root = loader.load();
-        Node node = (Node) event.getSource();
-        stage = (Stage) node.getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
 }

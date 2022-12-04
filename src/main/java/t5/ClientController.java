@@ -55,8 +55,6 @@ public class ClientController extends Thread {
     PrintWriter writer;
     Socket socket;
 
-    private Parent root;
-    private Scene scene;
     private Stage stage;
 
     public void connectSocket() {

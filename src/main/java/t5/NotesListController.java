@@ -20,7 +20,7 @@ import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.stage.Stage;
 
-public class NotesListController implements Initializable {
+public class NotesListController extends home implements Initializable  {
 
 	@FXML
 	private TreeView treeview;
@@ -76,14 +76,6 @@ public class NotesListController implements Initializable {
 		rootItem.getChildren().add(Item);
 	}
 
-	public void home(ActionEvent event) throws IOException {
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("Main.fxml"));
-		root = loader.load();
-		Node node = (Node) event.getSource();
-		stage = (Stage) node.getScene().getWindow();
-		scene = new Scene(root);
-		stage.setScene(scene);
-		stage.show();
-	}
+	
 
 }

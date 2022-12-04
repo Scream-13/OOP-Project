@@ -24,7 +24,7 @@ import javafx.scene.control.TreeView;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
-public class ProjectListController implements Initializable {
+public class ProjectListController extends home implements Initializable {
 
 	@FXML
 	private TreeView treeview;
@@ -32,8 +32,6 @@ public class ProjectListController implements Initializable {
 	private TextField title;
 	@FXML
 	private TextField Port_Number;
-	private Stage stage;
-	private Scene scene;
 	private Parent root;
 	private ArrayList<Server> serverlist = new ArrayList<>();
 	int portnumber = 0;
@@ -108,17 +106,6 @@ public class ProjectListController implements Initializable {
 		Scene scene = new Scene(root);
 		childstage.setScene(scene);
 		childstage.show();
-	}
-
-	public void home(ActionEvent event) throws IOException {
-
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("Main.fxml"));
-		root = loader.load();
-		Node node = (Node) event.getSource();
-		stage = (Stage) node.getScene().getWindow();
-		scene = new Scene(root);
-		stage.setScene(scene);
-		stage.show();
 	}
 
 }
