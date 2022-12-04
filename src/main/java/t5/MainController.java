@@ -56,5 +56,25 @@ public class MainController {
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
-	}	
+	}
+
+	public void timeTableInput(ActionEvent event) throws IOException {
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("TimeTableInput.fxml"));
+		root = loader.load();
+		Node node = (Node) event.getSource();
+		stage = (Stage) node.getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+	}
+
+	public void weeklyEval(ActionEvent event) throws IOException {
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("WeeklyEvalInput.fxml"));
+		root = loader.load();
+		Node node = (Node) event.getSource();
+		stage = (Stage) node.getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+	}
 }

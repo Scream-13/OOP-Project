@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TreeTableColumn?>
-<?import javafx.scene.control.TreeTableView?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<VBox fx:id="vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="t5.ScoreController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="t5.ScoreController">
    <children>
-      <TreeTableView fx:id="table" prefHeight="399.0" prefWidth="600.0">
-        <columns>
-          <TreeTableColumn fx:id="courseName" prefWidth="134.0" text="coursename" />
-          <TreeTableColumn fx:id="q1Marks" prefWidth="69.0" text="quiz1marks" />
-            <TreeTableColumn fx:id="q2Marks" prefWidth="59.0" text="quiz2marks" />
-            <TreeTableColumn fx:id="ass1Marks" prefWidth="104.0" text="asssmarks" />
-            <TreeTableColumn fx:id="midsemMarks" prefWidth="113.0" text="midmarks" />
-            <TreeTableColumn fx:id="compreMarks" prefWidth="120.0" text="compmarks" />
-        </columns>
-      </TreeTableView>
+      <AnchorPane layoutX="21.0" layoutY="36.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <TableView fx:id="table" layoutY="14.0" prefHeight="406.0" prefWidth="600.0">
+               <columns>
+                  <TableColumn fx:id="courseName" prefWidth="168.0" text="CourseName" />
+                  <TableColumn fx:id="q1Marks" text="q1Marks" />
+                  <TableColumn fx:id="q2Marks" prefWidth="79.0" text="q2Marks" />
+                  <TableColumn fx:id="ass1Marks" prefWidth="83.0" text="ass.Marks" />
+                  <TableColumn fx:id="midsemMarks" prefWidth="92.0" text="MidsemMarks" />
+                  <TableColumn fx:id="compreMarks" prefWidth="94.0" text="CompreMarks" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Button layoutX="42.0" layoutY="14.0" mnemonicParsing="false" onAction="#goHome" text="Home" />
    </children>
-</VBox>
+</AnchorPane>

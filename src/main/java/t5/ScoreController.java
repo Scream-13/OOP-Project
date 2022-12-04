@@ -19,7 +19,7 @@ import java.util.*;
 
 import static t5.CgpaController.s1;
 
-public class ScoreController implements Initializable {
+public class ScoreController extends home implements Initializable {
 
    @FXML  TableView<Score> table;
     @FXML  TableColumn<Score, String> courseName;
@@ -28,7 +28,6 @@ public class ScoreController implements Initializable {
     @FXML  TableColumn<Score, Float> ass1Marks;
     @FXML  TableColumn<Score, Float> midsemMarks;
     @FXML  TableColumn<Score, Float> compreMarks;
-    @FXML VBox vbox = new VBox();
 
 
    public void initialize(URL location, ResourceBundle resources) {
@@ -43,7 +42,6 @@ public class ScoreController implements Initializable {
             for(Float f: al) System.out.println(f);
             scores.add(new Score(c.getCourseName(), al.get(2), al.get(1), al.get(0), al.get(3), al.get(4)));
         }
-       vbox.getChildren().addAll(table);
        courseName.setCellValueFactory(new PropertyValueFactory<Score, String>("courseName"));
         q1Marks.setCellValueFactory(new PropertyValueFactory<Score, Float>("q1Marks"));
         q2Marks.setCellValueFactory(new PropertyValueFactory<Score, Float>("q2Marks"));
@@ -51,8 +49,6 @@ public class ScoreController implements Initializable {
         midsemMarks.setCellValueFactory(new PropertyValueFactory<Score, Float>("midsemMarks"));
         compreMarks.setCellValueFactory(new PropertyValueFactory<Score, Float>("compreMarks"));
         table.setItems(scores);
-        table.getColumns().addAll(courseName,q1Marks,q2Marks,ass1Marks,midsemMarks,compreMarks);
         }
-        Scene scene = new Scene(vbox);
     }
 

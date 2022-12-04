@@ -65,6 +65,7 @@
       <Button fx:id="calcButton" layoutX="323.0" layoutY="341.0" mnemonicParsing="false" onAction="#processData" text="calc" />
       <Label fx:id="nameLabel4" layoutX="414.0" layoutY="311.0" prefHeight="40.0" prefWidth="174.0" />
       <Label fx:id="nameLabel5" layoutX="418.0" layoutY="376.0" prefHeight="40.0" prefWidth="174.0" />
-      <Button layoutX="21.0" layoutY="24.0" mnemonicParsing="false" onAction="#goHome" text="Home" />
+      <Button fx:id="scoreView" layoutX="207.0" layoutY="342.0" mnemonicParsing="false" onAction="#openScoreView" prefHeight="26.0" prefWidth="98.0" text="View Score" />
+      <Button layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#goHome" text="Home" />
     </children>
 </AnchorPane>

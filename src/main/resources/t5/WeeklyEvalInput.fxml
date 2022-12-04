@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="t5.WeeklyEvalInput">
+    <children>
+        <Label fx:id="monday" alignment="CENTER" layoutX="79.0" layoutY="14.0" prefHeight="26.0" prefWidth="58.0" text="Monday" />
+        <Label fx:id="tuesday" alignment="CENTER" layoutX="170.0" layoutY="19.0" prefHeight="26.0" prefWidth="58.0" text="Tuesday" />
+        <Label fx:id="wednesday" alignment="CENTER" layoutX="254.0" layoutY="19.0" prefHeight="26.0" prefWidth="65.0" text="Wednesday" />
+        <Label fx:id="thursday" alignment="CENTER" layoutX="341.0" layoutY="19.0" prefHeight="26.0" prefWidth="58.0" text="Thursday" />
+        <Label fx:id="friday" alignment="CENTER" layoutX="425.0" layoutY="19.0" prefHeight="26.0" prefWidth="37.0" text="Friday" />
+        <Label fx:id="saturday" alignment="CENTER" layoutX="473.0" layoutY="19.0" prefHeight="26.0" prefWidth="50.0" text="Saturday" />
+        <Label fx:id="sunday" alignment="CENTER" contentDisplay="CENTER" layoutX="538.0" layoutY="19.0" prefHeight="26.0" prefWidth="50.0" text="Sunday" />
+        <TextField fx:id="m1" layoutX="79.0" layoutY="82.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="m2" layoutX="79.0" layoutY="116.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="m3" layoutX="79.0" layoutY="149.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="m4" layoutX="79.0" layoutY="200.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="m5" layoutX="79.0" layoutY="234.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="m6" layoutX="79.0" layoutY="270.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="t1" layoutX="170.0" layoutY="83.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="t2" layoutX="170.0" layoutY="117.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="t3" layoutX="170.0" layoutY="150.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="t4" layoutX="170.0" layoutY="201.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="t5" layoutX="170.0" layoutY="235.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="t6" layoutX="170.0" layoutY="271.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="w1" layoutX="254.0" layoutY="83.0" prefHeight="26.0" prefWidth="66.0" />
+        <TextField fx:id="w2" layoutX="254.0" layoutY="118.0" prefHeight="26.0" prefWidth="66.0" />
+        <TextField fx:id="w3" layoutX="254.0" layoutY="151.0" prefHeight="26.0" prefWidth="66.0" />
+        <TextField fx:id="w4" layoutX="254.0" layoutY="201.0" prefHeight="26.0" prefWidth="66.0" />
+        <TextField fx:id="w5" layoutX="254.0" layoutY="236.0" prefHeight="26.0" prefWidth="66.0" />
+        <TextField fx:id="w6" layoutX="254.0" layoutY="272.0" prefHeight="26.0" prefWidth="66.0" />
+        <TextField fx:id="th1" layoutX="341.0" layoutY="84.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="th2" layoutX="341.0" layoutY="117.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="th3" layoutX="341.0" layoutY="152.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="th4" layoutX="341.0" layoutY="201.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="th5" layoutX="341.0" layoutY="237.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="th6" layoutX="341.0" layoutY="273.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="fr1" layoutX="425.0" layoutY="85.0" prefHeight="26.0" prefWidth="38.0" />
+        <TextField fx:id="sat1" layoutX="473.0" layoutY="86.0" prefHeight="26.0" prefWidth="50.0" />
+        <TextField fx:id="sun1" layoutX="538.0" layoutY="84.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="fr2" layoutX="424.0" layoutY="119.0" prefHeight="26.0" prefWidth="38.0" />
+        <TextField fx:id="fr3" layoutX="424.0" layoutY="153.0" prefHeight="26.0" prefWidth="38.0" />
+        <TextField fx:id="fr4" layoutX="424.0" layoutY="202.0" prefHeight="26.0" prefWidth="38.0" />
+        <TextField fx:id="fr5" layoutX="424.0" layoutY="238.0" prefHeight="26.0" prefWidth="38.0" />
+        <TextField fx:id="fr6" layoutX="424.0" layoutY="274.0" prefHeight="26.0" prefWidth="38.0" />
+        <TextField fx:id="sat2" layoutX="473.0" layoutY="120.0" prefHeight="26.0" prefWidth="50.0" />
+        <TextField fx:id="sat3" layoutX="473.0" layoutY="154.0" prefHeight="26.0" prefWidth="50.0" />
+        <TextField fx:id="sat4" layoutX="473.0" layoutY="203.0" prefHeight="26.0" prefWidth="50.0" />
+        <TextField fx:id="sat5" layoutX="473.0" layoutY="239.0" prefHeight="26.0" prefWidth="50.0" />
+        <TextField fx:id="sat6" layoutX="473.0" layoutY="275.0" prefHeight="26.0" prefWidth="50.0" />
+        <TextField fx:id="sun2" layoutX="538.0" layoutY="121.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="sun3" layoutX="538.0" layoutY="155.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="sun4" layoutX="538.0" layoutY="201.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="sun5" layoutX="538.0" layoutY="239.0" prefHeight="26.0" prefWidth="58.0" />
+        <TextField fx:id="sun6" layoutX="538.0" layoutY="276.0" prefHeight="26.0" prefWidth="58.0" />
+        <Label fx:id="e1" alignment="CENTER" layoutX="27.0" layoutY="53.0" text="Eval1" />
+        <Label fx:id="e2" layoutX="27.0" layoutY="179.0" text="Eval2" />
+        <Label fx:id="s1" layoutX="27.0" layoutY="87.0" text="Subject" />
+        <Label fx:id="d1" layoutX="27.0" layoutY="121.0" text="Date" />
+        <Label fx:id="wt1" alignment="CENTER" layoutX="7.0" layoutY="154.0" prefHeight="18.0" prefWidth="66.0" text="Weightage" />
+        <Label fx:id="s2" layoutX="27.0" layoutY="206.0" text="Subject" />
+        <Label fx:id="d2" layoutX="27.0" layoutY="239.0" text="Date" />
+        <Label fx:id="wt2" layoutX="14.0" layoutY="275.0" prefHeight="18.0" prefWidth="66.0" text="Weightage" />
+      <Button fx:id="update" layoutX="218.0" layoutY="333.0" mnemonicParsing="false" onAction="#processData" text="Update" />
+      <Button fx:id="tableView" layoutX="300.0" layoutY="333.0" mnemonicParsing="false" onAction="#openEvalTableView" text="Weekly Evals" />
+    </children>
+</AnchorPane>

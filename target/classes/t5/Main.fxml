@@ -9,5 +9,7 @@
       <Button fx:id="projects" layoutX="111.0" layoutY="149.0" mnemonicParsing="false" onAction="#openProjects" text="Team Projects" />
       <Button fx:id="productivityTracker" layoutX="111.0" layoutY="235.0" mnemonicParsing="false" onAction="#openProductivity" text="Productivity Tracker" />
       <Button layoutX="111.0" layoutY="281.0" mnemonicParsing="false" onAction="#cgpa" text="Track Expected CGPA" />
+      <Button layoutX="111.0" layoutY="107.0" mnemonicParsing="false" onAction="#timeTableInput" text="Time Table Input" />
+      <Button layoutX="101.0" layoutY="67.0" mnemonicParsing="false" onAction="#weeklyEval" text="Weekly Eval Input" />
    </children>
 </AnchorPane>

@@ -25,7 +25,7 @@ import java.util.LinkedHashMap;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
-public class CgpaController extends home implements Initializable, Processor {
+public class CgpaController extends home implements Initializable {
     public static Student s1 = new Student();
 
     private static final DecimalFormat decfor = new DecimalFormat("0.000");
@@ -91,7 +91,6 @@ public class CgpaController extends home implements Initializable, Processor {
         stage.setScene(scene);
         stage.show();
     }
-
     public void processData(ActionEvent event) throws IOException {
         String coursename1 = c1.getText();
         String coursename2 = c2.getText();
@@ -539,14 +538,12 @@ public class CgpaController extends home implements Initializable, Processor {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         File myObj = new File("Scores.txt");
         Scanner myReader = null;
-        if(myObj.exists()){
         try {
             myReader = new Scanner(myObj);
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-    
 
         if(myReader.hasNextLine()){
             String data = myReader.nextLine();
@@ -644,6 +641,5 @@ public class CgpaController extends home implements Initializable, Processor {
             Float data = Float.parseFloat(myReader.nextLine());
             comp4.setText(String.valueOf(data));
         }
-    }
     }
 }
