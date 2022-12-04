@@ -47,84 +47,31 @@ public class ClientController extends Thread {
     @FXML
     private TextField port_number;
     @FXML
-	static
-    VBox vbox_messages = new VBox(20);
+    static VBox vbox_messages = new VBox(20);
     @FXML
     private ScrollPane sp_main;
-    
+
     BufferedReader reader;
     PrintWriter writer;
     Socket socket;
-    
+
     private Parent root;
     private Scene scene;
     private Stage stage;
 
-//    @Override
-//    public void initialize(URL url, ResourceBundle resourceBundle) {
-//    	Scanner sc= new Scanner(System.in);
-//    	System.out.println("Enter the username");
-//    	username=sc.nextLine();
-//        try{
-//            client = new Client(new Socket("localhost", 1234),username);
-//            System.out.println("Connected to Server");
-//        }catch(IOException e){
-//            e.printStackTrace();
-//            System.out.println("Error creating Client ... ");
-//        }
-//
-////        vbox_messages.heightProperty().addListener(new ChangeListener<Number>() {
-////            @Override
-////            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-////                sp_main.setVvalue((Double) newValue);
-////            }
-////        });
-//
-//        client.listenForMessage(vbox_messages);
-//
-//        button_send.setOnAction(new EventHandler<ActionEvent>() {
-//            @Override
-//            public void handle(ActionEvent actionEvent) {
-//                String messageToSend = tf_message.getText();
-//                if (!messageToSend.isEmpty()) {
-//                    HBox hBox = new HBox();
-//                    hBox.setAlignment(Pos.CENTER_RIGHT);
-//
-//                    hBox.setPadding(new Insets(5, 5, 5, 10));
-//                    Text text = new Text(messageToSend);
-//                    TextFlow textFlow = new TextFlow(text);
-//                    textFlow.setStyle(
-//                            "-fx-color: rgb(239, 242, 255);" +
-//                                    "-fx-background-color: rgb(15, 125, 242);" +
-//                                    "-fx-background-radius: 20px;");
-//
-//                    textFlow.setPadding(new Insets(5, 10, 5, 10));
-//                    text.setFill(Color.color(0.934, 0.925, 0.996));
-//
-//                    hBox.getChildren().add(textFlow);
-//                    vbox_messages.getChildren().add(hBox);
-//
-//                    client.sendMessage(messageToSend);
-//                    tf_message.clear();
-//                }
-//            }
-//        });
-//    }
-    
     public void connectSocket() {
         try {
             socket = new Socket("localhost", Integer.parseInt(port_number.getText()));
             System.out.println("Socket is connected with server!");
             reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             writer = new PrintWriter(socket.getOutputStream(), true);
-            writer.println(username.getText().toUpperCase()+" joined the project"+"\n");
+            writer.println(username.getText().toUpperCase() + " joined the project" + "\n");
             this.start();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        ProjectListController obj = new ProjectListController();
     }
-    
+
     @Override
     public void run() {
         try {
@@ -134,36 +81,32 @@ public class ClientController extends Thread {
                 String cmd = tokens[0];
                 System.out.println(cmd);
                 String fullmsg = new String();
-                for(int i = 1; i < tokens.length; i++) {
-                    fullmsg=fullmsg+" "+tokens[i];
+                for (int i = 1; i < tokens.length; i++) {
+                    fullmsg = fullmsg + tokens[i] + " ";
                 }
-                System.out.println(fullmsg); 
-                msgRoom.appendText(cmd + "\n");
-                msgRoom.appendText(fullmsg);
+                System.out.println(fullmsg);
+                msgRoom.appendText(cmd.toUpperCase() + "\n");
+                msgRoom.appendText(fullmsg + "\n");
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    
+
     public void send() {
         String msg = msgField.getText();
         writer.println(username.getText() + ": " + msg);
-        this.msgRoom.appendText(msg+"\n");
         msgField.setText("");
     }
-    
-    public void leave(ActionEvent event) throws IOException{
-    	reader.close();
-        writer.close();
-        socket.close();
-   	    Node node = (Node) event.getSource();
-   	    stage= (Stage) node.getScene().getWindow();
-   	    stage.close();
+
+    public void leave(ActionEvent event) throws IOException {
+        Node node = (Node) event.getSource();
+        stage = (Stage) node.getScene().getWindow();
+        stage.close();
     }
-    
+
     public void joinserver() {
-    	connectSocket();
+        connectSocket();
     }
 
 }

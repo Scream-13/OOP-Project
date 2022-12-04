@@ -25,82 +25,100 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
 public class ProjectListController implements Initializable {
-	
-	@FXML private TreeView treeview;
-	@FXML private TextField title;
+
+	@FXML
+	private TreeView treeview;
+	@FXML
+	private TextField title;
+	@FXML
+	private TextField Port_Number;
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
 	private ArrayList<Server> serverlist = new ArrayList<>();
-	int portnumber=4444;
-    
+	int portnumber = 0;
+
 	TreeItem<String> rootItem = new TreeItem<>("Projects");
-	
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 		File file = new File("Projects.txt");
-		if(file.exists()) {
-		File myObj = new File("Projects.txt");
-	    Scanner myReader = null;
-		try {
-			myReader = new Scanner(myObj);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	    while (myReader.hasNextLine()) {
-	        String data = myReader.nextLine();
-	        TreeItem<String> Item = new TreeItem<>(data);
-	        rootItem.getChildren().add(Item);  
-	      }
+		if (file.exists()) {
+			File myObj = new File("Projects.txt");
+			Scanner myReader = null;
+			try {
+				myReader = new Scanner(myObj);
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			while (myReader.hasNextLine()) {
+				String data = myReader.nextLine();
+				TreeItem<String> Item = new TreeItem<>(data);
+				rootItem.getChildren().add(Item);
+			}
 		}
 		treeview.setRoot(rootItem);
-		
-		
+
 	}
-	
+
 	public void newProject(ActionEvent event) throws IOException {
-		TreeItem<String> Item = new TreeItem<>(title.getText()+" (port :"+Integer.toString(portnumber)+")");
-		rootItem.getChildren().add(Item);
-		File file= new File("Projects.txt");
-        FileWriter fw = new FileWriter(file,true);
-        PrintWriter pw = new PrintWriter(fw);
-        pw.println(title.getText()+" (port :"+Integer.toString(portnumber)+")");
-        pw.close();
+		File file = new File("Projects.txt");
+		FileWriter fw = new FileWriter(file, true);
+		PrintWriter pw = new PrintWriter(fw);
+		portnumber = Integer.parseInt(Port_Number.getText());
+		int t=portnumber;
+		int c=0;
+		while(t>0){
+			c++;
+			t=t/10;
+		}
+		if(c==4 && portnumber>1023){
+
+			TreeItem<String> Item = new TreeItem<>(title.getText() + " (port :" + Integer.toString(portnumber) + ")");
+			rootItem.getChildren().add(Item);
+		
+		pw.println(title.getText() + " (port :" + Integer.toString(portnumber) + ")");
+		pw.close();
 		new Thread(new Runnable() {
 
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
-				Server server = new Server(portnumber,title.getText()+".txt");
+				Server server = new Server(portnumber, title.getText() + ".txt");
 				serverlist.add(server);
 			}
-			
+
 		}).start();
 		title.clear();
-		portnumber++;
 	}
-	
+	else{
+		Alert a= new Alert(AlertType.NONE);
+		a.setAlertType(AlertType.ERROR);
+        	a.setContentText("Enter a valid portnumber greater than 1023");
+        	a.show();
+	}
+	}
+
 	public void joinProject(ActionEvent event) throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("Client.fxml"));
-   	    root = loader.load();
-   	    Stage childstage = new Stage();
-   	    Scene scene = new Scene(root);
-   	    childstage.setScene(scene);
-   	    childstage.show();
+		root = loader.load();
+		Stage childstage = new Stage();
+		Scene scene = new Scene(root);
+		childstage.setScene(scene);
+		childstage.show();
 	}
-	
+
 	public void home(ActionEvent event) throws IOException {
+
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("Main.fxml"));
-   	    root = loader.load();
-   	    Node node = (Node) event.getSource();
-   	    stage= (Stage) node.getScene().getWindow();
-   	    scene = new Scene(root);
-   	    stage.setScene(scene);
-   	    stage.show();
+		root = loader.load();
+		Node node = (Node) event.getSource();
+		stage = (Stage) node.getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
 	}
-	
-	
-     
+
 }
