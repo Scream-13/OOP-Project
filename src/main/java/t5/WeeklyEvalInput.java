@@ -24,7 +24,7 @@ import java.util.LinkedHashMap;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
-public class WeeklyEvalInput implements Initializable {
+public class WeeklyEvalInput extends home implements Initializable {
 
     public static EvalVariables varis;
 

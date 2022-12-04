@@ -13,7 +13,7 @@ import javafx.scene.control.TableColumn;
 import javafx.collections.ObservableList;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class EvalController implements Initializable {
+public class EvalController extends home implements Initializable {
     public static WeeklyEvalInput Ti = new WeeklyEvalInput();
     @FXML
     private TableView<EvalDays> table;

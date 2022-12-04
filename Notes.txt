@@ -4,3 +4,5 @@ oop
 nice
 try1
 try
+newnote
+hjdhjksnadfj

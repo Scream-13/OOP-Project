@@ -66,5 +66,6 @@
         <Label fx:id="wt2" layoutX="14.0" layoutY="275.0" prefHeight="18.0" prefWidth="66.0" text="Weightage" />
       <Button fx:id="update" layoutX="218.0" layoutY="333.0" mnemonicParsing="false" onAction="#processData" text="Update" />
       <Button fx:id="tableView" layoutX="300.0" layoutY="333.0" mnemonicParsing="false" onAction="#openEvalTableView" text="Weekly Evals" />
+      <Button layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#goHome" text="Home" />
     </children>
 </AnchorPane>
